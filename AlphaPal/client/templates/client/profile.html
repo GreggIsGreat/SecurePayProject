@@ -1,0 +1,51 @@
+{% include 'AlphaPalApp/navbar.html' %}
+{% include 'AlphaPalApp/main.html' %}
+{% load static %}
+<title>Profile</title>
+
+{% block content %}
+<center>
+  <span class="devInfo__title">User Profiles</span>
+</center>
+<hr>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{% static 'media/favicon.ico' %}" type="image/x-icon" />
+  <!-- Icon - IconMonster -->
+  <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css" />
+  <!-- Mumble UI -->
+  <link rel="stylesheet" href="{% static 'uikit/styles/uikit.css' %}" />
+  <!-- Dev Search UI -->
+  <link rel="stylesheet" href="{% static 'css/app.css' %}" />
+</head>
+<body>
+  <!-- Main Section -->
+  <main class="profile my-lg">
+    <div class="container">
+      <div class="layout">
+        {% for profile in profile %}
+        <div class="column column--1of3">
+          <div class="card text-center">
+            <div class="card__body dev">
+              <a href="{% url 'user-profile' profile.id %}"><img class="avatar avatar--xl" src="{{ profile.profile_image.url }}" /></a>
+              <p class="dev__name">{{ profile.name }}</p>
+              <p class="dev__location">{{ profile.location }}</p>
+              <ul class="dev__social">
+                <li>
+                  <a title="Twitter" href="twitter.com" target="_blank"><i class="im im-twitter">{{ profile.social_twitter }}</i></a>
+                </li>
+              </ul>
+              <a href="{% url 'user_profile_update' profile.pk %}" class="btn btn--sub btn--lg">Update Info</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </main>
+</body>
+{% endblock content %}

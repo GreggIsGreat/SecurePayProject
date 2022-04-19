@@ -1,0 +1,23 @@
+{% include 'AlphaPalApp/main.html' %}
+{% include 'AlphaPalApp/navbar.html' %}
+{% load crispy_forms_tags %}
+<head>
+    <meta charset="UTF-8">
+    <title>User_Profile_Update</title>
+</head>
+<body>
+<div class="container p-3 my-3 bg-white text-black">
+    <center>
+    <span>Update User Information</span>
+</center>
+<div class="container">
+<form class="bootstrap" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                {{ form|crispy }}
+
+                <button class="btn btn-dark" type="submit" value="Submit">Submit</button>
+            </form>
+</div>
+</div>
+</body>

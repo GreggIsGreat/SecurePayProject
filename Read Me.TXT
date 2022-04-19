@@ -1,0 +1,4 @@
+First you need to  enter this 'cd AlphaPal' in the terminal 
+
+Admin Username: Ted
+Password: 1234

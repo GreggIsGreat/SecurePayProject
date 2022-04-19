@@ -1,0 +1,73 @@
+{% include 'AlphaPalApp/navbar.html' %}
+{% include 'AlphaPalApp/main.html' %}
+{% load static %}
+    <title>User Info</title>
+<head>
+    <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{% static 'media/favicon.ico' %}" type="image/x-icon" />
+  <!-- Icon - IconMonster -->
+  <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css" />
+  <!-- Mumble UI -->
+  <link rel="stylesheet" href="{% static 'uikit/styles/uikit.css' %}" />
+  <!-- Dev Search UI -->
+  <link rel="stylesheet" href="{% static 'css/app.css' %}" />
+</head>
+</head>
+<body>
+{% block content %}
+<div class="container p-3 my-3 bg-white text-black">
+<center>
+<span class="devInfo__title">User Info</span>
+</center>
+  <div class="devInfo">
+      <div class="container">
+    <span class="devInfo__title">User Profile</span>
+    <div class="devInfo__skills">
+      <div class="devSkill">
+
+        <span class="devSkill__title">Username</span>
+        <span class="devSkill__info">
+          {{ prof.name }}
+        </span>
+      </div>
+      <div class="devSkill">
+        <span class="devSkill__title">Bio</span>
+        <span class="devSkill__info">
+          {{ prof.bio }}
+        </span>
+      </div>
+      <div class="devSkill">
+        <span class="devSkill__title">Email</span>
+        <span class="devSkill__info">{{ prof.email }}
+        </span>
+      </div>
+        <div class="devSkill">
+        <span class="devSkill__title">Location</span>
+        <span class="devSkill__info">{{ prof.location }}
+        </span>
+      </div>
+        <div class="devSkill">
+        <span class="devSkill__title">Socials</span>
+        <span class="devSkill__info">{{ prof.social_twitter }}
+        </span>
+      </div>
+        <div class="devSkill">
+        <span class="devSkill__title">Created</span>
+        <span class="devSkill__info">{{ prof.created }}
+        </span>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+{% endblock content %}
+</body>
+
+
+
+

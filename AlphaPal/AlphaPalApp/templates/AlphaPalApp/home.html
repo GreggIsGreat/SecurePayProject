@@ -1,0 +1,225 @@
+{% include 'AlphaPalApp/navbar.html' %}
+{% include 'AlphaPalApp/main.html' %}
+{% load static %}
+<title>Alpha-Pal</title>
+<head>
+
+</head>
+<br>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+{% block content %}
+<ul>{{ message }}</ul>
+<main class="projects">
+    <section class="hero-section text-center">
+        <div class="container container--narrow">
+            <div class="hero-section__box">
+                <span>Search for Users</span>
+            </div>
+
+            <div class="hero-section__search">
+                <form id='searchForm' class="form" action="{% url 'home' %}" method="get">
+                    <div class="form__field">
+                        <input class="input input--text" id="formInput#search" type="text" name="search_query"
+                            placeholder="First Name" value="{{search_query}}" />
+                    </div>
+
+                    <input  class="btn btn-dark" type="submit" value="Search" />
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Search Result: DevList -->
+    <section class="projectsList">
+        <div class="container">
+            <div class="grid grid--three">
+            </div>
+        </div>
+    </section>
+</main>
+
+<div class="w3-content w3-section" style="max-width:1000px">
+    <p>
+     More than 50,000 people filed scam reports with the Better
+     Business Bureau in 2018, according to the 2018 BBB Scam
+     Tracker Annual Risk Report. While the median loss for these scams was $152,
+     some victims were out thousands of dollars – and that money may never be recouped.
+    </p>
+    <p>
+        Check overpayment fraud is a popular scam that targets sellers from online auctions
+        and classified advertisement websites. During a transaction, the fraudulent buyer
+        will pay the seller with a noncash payment for more than the amount of the item.
+        The scammer will then ask the victim to deposit the check and wire the difference
+        back to the buyer. However, the check will ultimately be found to be fake, and the seller
+        will be out not only a returned item fee, but also whatever cash they forwarded to the
+        supposed buyer.
+    </p>
+  <img class="mySlides" src="{% static 'media/1.jpg' %}" style="width:100%">
+  <img class="mySlides" src="{% static 'media/2.jpg' %}" style="width:100%">
+  <img class="mySlides" src="{% static 'media/4.png' %}" style="width:100%">
+</div>
+<div class="container">
+    <p>
+        The industrial revolution was perhaps the biggest change that
+        businesses ever faced. It changed the very way one did
+        business, particularly with large-scale production becoming the
+        order of the day. Although the industrial revolution was
+        confined to Europe, its impact was felt the world over. Two
+        centuries later, a similar revolution, but of a higher magnitude
+        and more global in nature, is invading businesses worldwide––a
+        revolution called e-commerce.
+    </p>
+
+    <p>
+        In any business there are three distinct groups: suppliers,
+        customers, and the environment that may or may not have
+        interactions with the manufacturer. This environment includes
+        the government, the judiciary, the monetary system,
+        competition, and other countries and international bodies that
+        would have a direct impact on the way one-do business.
+        Traditionally, organizations have maintained a clearly defined
+        interface that separates them from the rest of the universe. In
+        today’s information age, this interface is rapidly changing and
+        is being replaced by new mechanisms that make it easier to
+        transfer information across the boundary. The e-commerce has
+        changed the way the business is done.
+        The e-commerce and e-business has evolved through a set of
+        technological changes coming in picture. These evolutions are
+        as follows:
+    </p>
+
+    <p>
+        a) Internal Computerization in the company: The manual
+        works being done in the business segments were
+        computerized to speed up the work. Then networks were
+        setup to share information pertaining to work. In the
+        business universe, the network first appeared within the
+        organization. Interactions of this network with the outside
+        world were almost zero. For any data to get added to or get
+        out of this system, manual intervention like retyping and
+        transportation in floppy was required.
+    </p>
+
+    <p>
+
+    </p>     b) Electronics Data Interchange with suppliers: The next
+        big step was the extension of access of this network to
+        suppliers. This is widely known as EDI—Electronic Data
+        Interchange. Now one could directly place an order on his
+        supplier’s network without needing the intervening paper
+        work. One could also access information regarding
+        availability of stocks and raw materials at his end, and so
+        on. One could plan better, reduce inventories, improve
+        turnaround time, and so on. But the cost of setting up an
+        EDI system can be prohibitive, particularly if the seller and
+        the suppliers are operating far apart. So very few businesses
+        could go in for such systems.
+
+    <p>
+        c) Internet Connectivity to End-Users: The next logical step
+        would be to extend this network to the customers also. But
+        for most businesses, even for the really big ones, this was
+        impossible, given the spread-out nature of the end
+        customer. The best that could be achieved was to extend
+    </p>
+</div>
+</body>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="About Us, Trust the professionals, Business And Marketing, About Us, Trust the professionals, Time is money, Ultimate timing, Ultimate Business Solutions, We do business right">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <link rel="stylesheet" href="{% static 'css/nicepage.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'css/Home.css' %}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static 'js/jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'js/nicepage.js' %}" defer=""></script>
+    <meta name="generator" content="Nicepage 3.24.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster:400|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700|Convergence:400">
+
+    <script type="application/ld+json">
+        {"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "Site1"}
+    </script>
+    <meta name="theme-color" content="#ff7070">
+    <meta property="og:title" content="Home">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+  </head>
+  <body data-home-page="Home.html" data-home-page-title="Home" class="u-body">
+    <section class="u-align-center u-clearfix u-palette-2-light-3 u-section-1" id="carousel_64a5">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-gutter-0 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout" style="">
+            <div class="u-layout-row" style="">
+              <div class="u-align-center-lg u-align-center-xl u-black u-container-style u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-layout-cell-1" src="">
+                <div class="u-container-layout u-valign-bottom u-container-layout-1" src="">
+                  <img src="{% static 'media/9.png' %}" alt="" class="u-expanded-width u-image u-image-default u-image-1">
+                </div>
+                </div>
+                <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-white u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <h1 class="u-custom-font u-font-oswald u-text u-text-palette-4-base u-text-1">Bank Safe with Alpha Beamers</h1>
+                  <h3 class="u-custom-font u-text u-text-2">with our new ONLINE Payment&nbsp;</h3>
+                  <p class="u-text u-text-3">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-palette-2-light-3 u-section-2" id="sec-2758">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout" style="">
+            <div class="u-layout-row" style="">
+              <div class="u-align-left u-container-style u-image u-layout-cell u-left-cell u-shading u-size-30 u-size-xs-60 u-image-1" src="" data-image-width="1280" data-image-height="684">
+                <div class="u-container-layout u-container-layout-1" src="">
+                  <h2 class="u-custom-font u-font-oswald u-text u-text-default u-text-1">Use advanced anti-malware program</h2>
+                  <p class="u-text u-text-2">
+                      It will protect both classified and unclassified attacks on your
+                      computer and other digital devices you are using.
+                      Make sure your anti-malware program is updated or its
+                      auto update option is “on”. Make sure that the antivirus
+                      program is able to detect newly created and mutated malware
+                      threats even before it’s included in the database of the automatic updates.</p>
+                </div>
+              </div>
+              <div class="u-align-left u-container-style u-grey-5 u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <h2 class="u-custom-font u-font-oswald u-text u-text-default u-text-3">Watch out for security vulnerabilities in your PC</h2>
+                  <p class="u-text u-text-4">
+                      Some of the malware programs are designed to manipulate the security vulnerabilities
+                      in the OS and web browsers and steal your financial data. You can run System Mechanic
+                      security optimizer, which will detect and fix such vulnerabilities in both the web
+                      browser and the operating system. Always keep your web browser and operating system up to date.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% include 'AlphaPalApp/main.html' %}
+{% include 'AlphaPalApp/navbar.html' %}
+<title>Data Summary</title>
+
+<center>
+    <span>Transaction Summary Page</span>
+</center>
+<header>
+    <center>
+<table align="center">
+
+    <tr>
+        <th>Client Name</th>
+        <th>Transaction Type</th>
+        <th>Transaction Time</th>
+        <th>Transaction Id</th>
+        <th>Transaction Amount</th>
+        <th></th>
+
+
+    </tr>
+        {% for int in tran %}
+        <tr>
+            <td>{{ int.name }}</td>
+            <td>{{ int }}</td>
+            <td>{{ int.transaction  }}</td>
+            <td>{{ int.transaction_id  }}</td>
+            <td>{{ int.transaction_amount  }}</td>
+            <td><a href="{% url 'transaction' %}">Make Transaction</a></td>
+        </tr>
+        {% endfor %}
+<hr>
+</table>
+    </center>
+<style>
+         table, td, th {
+            border: 1px solid black;
+            table-layout: auto;
+            width: 200px;
+
+         }
+      </style>
+<hr>
+    </header>
+<center>
+    <button onclick="goBack()" class="btn btn-dark">Back</button>
+</center>

@@ -1,0 +1,31 @@
+{% load static %}
+{% include 'AlphaPalApp/main.html' %}
+{% include 'AlphaPalApp/navbar.html' %}
+<title>Detail Page</title>
+
+{% block content %}
+<div class="container p-3 my-3 bg-white text-black">
+<div class="container">
+    <span class="devInfo__title">Details Page</span>
+<hr>
+    {% for Int in det %}
+    <img src="{{ Int.user_image.url }}" style="max-width:300px" alt="User Profile"><hr/>
+    <span>Client Name:</span> {{ Int.name }}<hr/>
+    <span>Client E-mail:</span> {{ Int.email }}<hr/>
+    <span>Date Of Birth:</span> {{ Int.birthday }}<hr/>
+    <span>Date Created:</span> {{ Int.created }}<hr/>
+   <strong><span>Account Details</span></strong>
+    <hr>
+        {% for acc in many %}
+            <span>Balance:</span> {{ acc.balance }}<hr/>
+            <span>Account Number:</span> {{ acc.account_number }}<hr/>
+            <span>Account Type:</span> {{ acc.account_type }}<hr/>
+        {% endfor %}
+    {% endfor %}
+        <center>
+            <a href="{% url 'createaccount' %}"><button class="btn btn-dark">Create Account</button></a>
+            <button onclick="goBack()" class="btn btn-dark">Back</button>
+        </center>
+</div>
+</div>
+{% endblock %}

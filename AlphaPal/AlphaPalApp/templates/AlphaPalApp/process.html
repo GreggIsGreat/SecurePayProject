@@ -1,0 +1,29 @@
+{% include 'AlphaPalApp/main.html' %}
+{% include 'AlphaPalApp/navbar.html' %}
+<title>Data Processing Page</title>
+
+<center>
+<span>Data Processing Page</span>
+</center>
+<hr>
+<center>
+<table align="center" border="bold">
+    <tr>
+        <th>Client Name</th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+ {% for unit in user %}
+    <tr>
+        <td>{{ unit.name }}</td>
+        <td><a href="{% url 'detail' unit.pk %}">View</a></td>
+        <td><a href="{% url 'update' unit.pk %}">Update</a></td>
+        <td><a href="{% url 'delete' unit.pk %}">Delete</a></td>
+ {% endfor %}
+</table>
+</center>
+<hr>
+<center>
+    <button onclick="goBack()" class="btn btn-dark">Back</button>
+</center>

@@ -1,0 +1,17 @@
+{% include 'AlphaPalApp/main.html' %}
+{% include 'AlphaPalApp/navbar.html' %}
+{% block content %}
+    <title>Account</title>
+
+<center>
+    <span>Create an Account now!</span>
+<br>
+    <hr>
+<form action="" method="POST">
+     {% csrf_token %}
+     {{ form }}
+     <input class="btn btn-dark" type="Submit">
+ </form>
+    <hr>
+    </center>
+{% endblock %}
